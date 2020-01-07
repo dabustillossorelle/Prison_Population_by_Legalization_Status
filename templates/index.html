@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prison_Population_by_State_Status</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<head>
+    <p>The total prison population is higher in states that prohibit marijuana for recreational or medicinal use. 
+        In states that have legalized recreational marijuana use the private prison population is strikingly low while the private prison population in states where marijuana use is prohibited is very high. 
+        There is evidence to suggest that the owners of private prisons give money to politicians who oppose marijuana legalization (Williams, 2017, Nanan, 2017).  The Pharmaceutical Industry
+        also have an intrest in stopping marijuana legalization. It is estimated that "major pharmaceutical companies stand to lose 18.5 billion dollars in profits in medical becomes legal in all 50 states (Mealey, 2018)." 
+        You can see the differences in prison population (private, public and total) and opioid prescription and overdose deaths by state legalization status in the graphs below.  
+    
+    References:
+    Mealey, L. (March, 2018). Pot and politics: Investigating barriers to medical marijuana legalization. Harvard Political Review;
+    Nanan, M.(April, 2017). Private Prisons and Pharmaceutical Industry Fight Against Marijuana Legalization. Project Censored: The News That Didn't Make the News; 
+    Williams, L. (December, 2017). Meet the Special Interests Keeping Marijuana Criminalized. Foundation for Economic Education</p>
+    
+</head>
+<body>
+    <div id="bar"></div>
+    <select id="selDataset" onchange="getData(this.value)">
+        <option value="population_in_private_prison">Private Prison Population By State Legalization Status</option>
+        <option value="population_in_public_prison">Public Prison Population By State Legalization Status</option>
+        <option value="total_population_in_prison">Total Population in Prison By State Legalization Status</option>
+        <option value="opiod_prescription_100_people">Mean Number of Opioid Prescriptions per 100 People</option>
+        <option value="opioid_od_deaths">Total Number of Opioid Overdose Deaths</option>
+    </select>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>
